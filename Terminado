@@ -253,3 +253,17 @@ subconsultas
 12) SELECT * FROM clientes WHERE id IN (SELECT DISTINCT cliente FROM compras);
 13) SELECT * FROM productos WHERE id NOT IN (SELECT DISTINCT producto FROM compras);
 14) SELECT * FROM provincias WHERE region = (SELECT region FROM provincias WHERE nombre = 'Santa Fe' LIMIT 1);
+
+
+vistas
+
+1) create view nombre_cliente as  select nombre, apellido from clientes
+2) INSERT into cliente_segura (nombre,apellido) VALUES ("Santino", "lerman")
+3) drop VIEW if EXISTS cliente_segura 
+4) CREATE VIEW  bicpr as SELECT * from productos where marca = "BIC" 
+5) create view lol as select c.*, ci.nombre as nombre_ciudad from clientes c join ciudades ci on c.localidad = ci.nombre where ci.nombre = 'buenos aires';
+6) 
+7)
+8)
+9)
+10)
